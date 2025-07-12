@@ -23,7 +23,7 @@ const DocumentProcessor = () => {
     openaiApiKey: '',
     
     // Replace 'your-anthropic-api-key-here' with your actual Anthropic API key (optional)
-    anthropicApiKey: 'your-anthropic-api-key-here',
+    anthropicApiKey: '',
     
     // Replace 'your-huggingface-api-key-here' with your actual Hugging Face API key (optional)
     huggingfaceApiKey: '',
@@ -82,10 +82,10 @@ const DocumentProcessor = () => {
     reset();
   };
 
-  // Check if at least one API key is configured (not the placeholder)
-  const hasApiKeys = (aiConfig.openaiApiKey && aiConfig.openaiApiKey !== 'your-openai-api-key-here') ||
-                     (aiConfig.anthropicApiKey && aiConfig.anthropicApiKey !== 'your-anthropic-api-key-here') ||
-                     (aiConfig.huggingfaceApiKey && aiConfig.huggingfaceApiKey !== 'your-huggingface-api-key-here');
+  // Check if at least one API key is configured
+  const hasApiKeys = (aiConfig.openaiApiKey && aiConfig.openaiApiKey.trim() !== '') ||
+                     (aiConfig.anthropicApiKey && aiConfig.anthropicApiKey.trim() !== '') ||
+                     (aiConfig.huggingfaceApiKey && aiConfig.huggingfaceApiKey.trim() !== '');
 
   if (!hasApiKeys) {
     return (
