@@ -20,13 +20,13 @@ const DocumentProcessor = () => {
   // AI Service configuration - ADD YOUR API KEYS HERE
   const aiConfig: AIServiceConfig = {
     // Replace 'your-openai-api-key-here' with your actual OpenAI API key
-    openaiApiKey: '',
+    
     
     // Replace 'your-anthropic-api-key-here' with your actual Anthropic API key (optional)
-    anthropicApiKey: '',
+  
     
     // Replace 'your-huggingface-api-key-here' with your actual Hugging Face API key (optional)
-    huggingfaceApiKey: '',
+    
     
     // Alternative: You can also use localStorage (comment out the lines above and uncomment these)
     // openaiApiKey: localStorage.getItem('openai_api_key') || undefined,
